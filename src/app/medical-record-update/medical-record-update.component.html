@@ -1,0 +1,45 @@
+<h1>Sửa thông tin bệnh án</h1>
+<form [formGroup]="meRecForm" (ngSubmit)="updateMediRec(idRecord)">
+  <table>
+    <tr>
+      <td>Mã bệnh án</td>
+      <td><input type="text" formControlName="idRecord" [attr.disabled]="true"></td>
+    </tr>
+    <tr>
+      <td>Mã bệnh nhân</td>
+      <td><input type="text" formControlName="patientId" [attr.disabled]="true"></td>
+    </tr>
+    <tr>
+      <td>Tên bệnh nhân</td>
+      <td><input type="text" formControlName="patientName">
+    </tr>
+    <tr>
+      <td>Ngày nhập viện</td>
+<!--      <td><input type="text" formControlName="startIn" [matDatepicker]="myDatepicker">-->
+<!--        <mat-datepicker #myDatepicker></mat-datepicker></td>-->
+      <td><input type="text" formControlName="startIn"></td>
+    </tr>
+    <tr>
+      <td>Ngày ra viện</td>
+      <td><input type="text" formControlName="startOut"></td>
+    </tr>
+    <tr>
+      <td>Lý do nhập viện</td>
+      <td><input type="text" formControlName="reason"></td>
+    </tr>
+    <tr>
+      <td>Phương pháp điều trị</td>
+      <td><input type="text" formControlName="treatmentMethods"></td>
+    </tr>
+    <tr>
+      <td>Bác sĩ điều trị</td>
+      <td><input type="text" formControlName="doctorName"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button>Cập nhật</button>
+      </td>
+    </tr>
+  </table>
+</form>
